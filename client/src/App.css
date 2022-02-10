@@ -1,0 +1,9 @@
+.App {
+  display: grid;
+  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-rows: 130px auto;
+  grid-template-areas: 
+    "SpellSelector header header header ."
+    "SpellSelector spellviewer spellviewer spellviewer ."
+    "SpellSelector spellviewer spellviewer spellviewer ."
+}

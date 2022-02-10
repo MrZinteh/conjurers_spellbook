@@ -1,0 +1,29 @@
+.SpellSelector {
+    grid-area: SpellSelector;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px;
+    font: normal normal normal 18px/24px Segoe UI;
+    letter-spacing: 0px;
+    letter-spacing: 0;
+    background-image: linear-gradient(261deg, #382fb6, #110f97);
+    opacity: 1;
+    gap: 20px;
+    height: 100vh;
+}
+
+.SpellHeader {
+    color: white;
+    font-size: 24px;
+    font-family: serif;
+}
+
+.Spell {
+    font: normal normal normal 18px/24px Segoe UI;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: transparent;
+    padding: 0px;
+    text-align: left;
+}

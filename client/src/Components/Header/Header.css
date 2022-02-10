@@ -1,0 +1,13 @@
+.Header {
+    grid-area: header;
+    justify-self: center;
+    font-size: 38px;
+    color: mediumblue;
+    font-family: 'Creepster';
+    padding: 8px 8px; 
+    margin: 30px 30px;
+    height: 45px;
+    border-style: solid;
+    border-width: 4px;
+    border-image: linear-gradient(261deg, #382fb6, #110f97) 1;
+  }

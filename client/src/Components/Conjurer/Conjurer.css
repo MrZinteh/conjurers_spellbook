@@ -1,0 +1,36 @@
+.Conjurer {
+    grid-area: conjurer;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 150px;
+    gap: 10px;
+    margin: 20px;
+}
+
+.ConjureButton {
+    font: normal normal normal 18px/24px Segoe UI;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    background: transparent linear-gradient(261deg, #382fb6 0%, #110f97 100%) 0% 0% no-repeat padding-box;
+    border-radius: 18px;
+    opacity: 1;
+    /* width: 126px; */
+    height: 36px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.ConjureSelector {
+    font: normal normal normal 18px/24px Segoe UI;
+    letter-spacing: 0px;
+    letter-spacing: 0;
+    /* border: 4px solid #700f97; */
+    border-style: solid;
+    border-width: 4px;
+    border-image: linear-gradient(261deg, #382fb6, #110f97) 1;
+    /* border-radius: 18px; */
+    opacity: 1;
+    height: 36px;
+    text-align: center;
+}
