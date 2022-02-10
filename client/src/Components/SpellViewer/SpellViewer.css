@@ -2,6 +2,8 @@
     grid-area: spellviewer;
     max-height: 400px;
     overflow-y: scroll;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .SpellHeading {
@@ -60,10 +62,6 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-}
-
-.detailContent {
-
 }
 
 .statBlock {

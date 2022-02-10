@@ -1,0 +1,6 @@
+.PossibleConjures {
+    grid-area: possibleConjures;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}

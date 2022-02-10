@@ -2,12 +2,14 @@
     grid-area: header;
     justify-self: center;
     font-size: 38px;
-    color: mediumblue;
+    color: rgb(231, 143, 112);
     font-family: 'Creepster';
     padding: 8px 8px; 
     margin: 30px 30px;
     height: 45px;
     border-style: solid;
     border-width: 4px;
-    border-image: linear-gradient(261deg, #382fb6, #110f97) 1;
+    border-color: rgb(255, 233, 74);;
+    background-color:rgb(77, 120, 160);
+    border-radius: 18px;
   }
