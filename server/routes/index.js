@@ -8,6 +8,7 @@ const constructsRoutes = require('./constructs');
 const elementalsRoutes = require('./elementals');
 const draconicSpiritsRoutes = require('./draconicSpirits');
 const fiendsRoutes = require('./fiends');
+const minionsRoutes = require('./minions');
 
 const router = express.Router();
 
@@ -19,5 +20,8 @@ router.get('/constructs', constructsRoutes.constructsGet);
 router.get('/elementals', elementalsRoutes.elementalsGet);
 router.get('/draconicSpirits', draconicSpiritsRoutes.draconicSpiritsGet);
 router.get('/fiends', fiendsRoutes.fiendsGet);
+router.get('/minions', minionsRoutes.minionsGet);
+router.post('/minions', minionsRoutes.minionsPost);
+router.delete('/minions', minionsRoutes.minionsDelete);
 
 module.exports = router;

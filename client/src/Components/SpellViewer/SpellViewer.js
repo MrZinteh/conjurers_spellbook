@@ -1,17 +1,30 @@
 import React from "react";
 import FindFamiliar from "./FindFamiliar";
 import './SpellViewer.css';
+import SummonFey from "./SummonFey";
 
 class SpellViewer extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = { };
+        this.spellSelection = this.spellSelection.bind(this);
+    }
+
+    spellSelection() {
+        switch(this.props.selectedSpell) {
+            case "Find Familiar":
+                return <FindFamiliar></FindFamiliar>;
+            case "Summon Fey":
+                return <SummonFey></SummonFey>;
+            default: 
+                return <FindFamiliar></FindFamiliar>;
+        }
     }
 
     render() {
         return (
             <div className="SpellViewer">
-                <FindFamiliar></FindFamiliar>
+                {this.spellSelection()}
             </div>
         );
     }

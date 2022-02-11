@@ -1,10 +1,10 @@
 .App {
   display: grid;
-  grid-template-columns: 5fr 5fr 5fr 5fr 5fr;
+  grid-template-columns: 4fr 5fr 5fr 5fr 6fr;
   grid-template-rows: 130px auto;
   grid-template-areas: 
-    "SpellSelector header header header ."
-    "SpellSelector spellviewer spellviewer spellviewer ."
-    "SpellSelector possibleConjures possibleConjures possibleConjures ."
+    "SpellSelector header header header minionViewer"
+    "SpellSelector spellviewer spellviewer spellviewer minionViewer"
+    "SpellSelector possibleConjures possibleConjures possibleConjures minionViewer"
     "SpellSelector . . . ."
 }

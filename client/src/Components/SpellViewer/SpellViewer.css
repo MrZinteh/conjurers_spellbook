@@ -41,6 +41,20 @@
     margin-right: 5px;
 }
 
+.i-concentration {
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    font-size: 13px;
+    background-image: url(https://www.dndbeyond.com/content/1-0-1869-0/skins/waterdeep/images/icons/core_mechanics/concentration.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    text-indent: -999999px;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
 .SpellDetails {
     box-sizing: border-box;
     display: block;

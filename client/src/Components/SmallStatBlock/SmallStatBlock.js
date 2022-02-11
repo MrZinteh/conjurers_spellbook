@@ -47,10 +47,10 @@ class SmallStatBlock extends React.Component {
                 </div>
                 <div className="SB-description">
                     {conjure.Description.map((description) => (
-                        <p><em><strong>{description.label}</strong></em> {description.value}</p>
+                        <p key={description.value}><em><strong>{description.label}</strong></em> {description.value}</p>
                     ))}
                 </div>
-                <AddButton></AddButton>
+                <AddButton onClick={this.props.onClick}></AddButton>
             </div>
         );
     }
