@@ -125,6 +125,53 @@
     font-size: 14px;
 }
 
+.more-info-content table {
+    border: 1px solid #edeae8;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table {
+    border-spacing: 0;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.compendium-left-aligned-table th:nth-child(1) {
+    text-align: center!important;
+}
+
+.compendium-left-aligned-table th {
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 2px solid #d0cac5;
+}
+
+.more-info-content table tbody tr:nth-child(odd) {
+    background: #faf8f7;
+}
+
+.more-info-content table tbody tr td {
+    /* min-width: 100px; */
+    padding: 20px;
+    background: 0;
+    max-width: 400px;
+}
+
+.compendium-left-aligned-table td:nth-child(1) {
+    vertical-align: middle!important;
+    padding: 8px 20px!important;
+    line-height: 1.4!important;
+}
+
+.compendium-left-aligned-table {
+    width: 100% !important;
+}
+
 .tooltip-hover {
     color: #47D18C;
     font-weight: 700;

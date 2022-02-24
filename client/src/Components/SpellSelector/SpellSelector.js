@@ -13,7 +13,7 @@ class SpellSelector extends React.Component {
                 <div className="SpellHeader">Spells:</div>
                 <button className="Spell" onClick={() => this.props.selectSpell("Find Familiar")}>Find Familiar</button>
                 <button className="Spell" onClick={() => this.props.selectSpell("Summon Fey")}>Summon Fey</button>
-                <button className="Spell">Summon Lesser Demons</button>
+                <button className="Spell" onClick={() => this.props.selectSpell("Summon Lesser Demons")}>Summon Lesser Demons</button>
                 <button className="Spell">Summon Shadow Spirit</button>
                 <button className="Spell">Conjure Minor Elemental</button>
                 <button className="Spell">Summon Abberation</button>

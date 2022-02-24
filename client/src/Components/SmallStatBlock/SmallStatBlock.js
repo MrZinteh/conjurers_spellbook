@@ -3,11 +3,21 @@ import AddButton from "./AddButton";
 import "./SmallStatBlock.css";
 
 class SmallStatBlock extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { expanded: false };
+        this.toggleExpanded = this.toggleExpanded.bind(this);
+    }
+
+    toggleExpanded() {
+        this.setState({ expanded: !this.state.expanded });
+    }
+
     render() {
         const conjure = this.props.conjure;
         return (
             <div className="SmallStatBlock">
-                <h3 className="monsterTitle">{conjure.name}</h3>
+                <h3 className="monsterTitle">{conjure.name} {conjure.subName ? `(${conjure.subName})` : ""}</h3>
                 <div className="SB-size">{conjure.size} fey</div>
                 <div className="SB-attributes">
                     <div className="SB-AC"><span className="attributeLabel">AC</span><span className="attributeValue"> {conjure.AC}</span></div>
@@ -50,6 +60,28 @@ class SmallStatBlock extends React.Component {
                         <p key={description.value}><em><strong>{description.label}</strong></em> {description.value}</p>
                     ))}
                 </div>
+                {conjure.Actions ? 
+                (<div>
+                    <div className="SB-actionlabel">
+                        <p>Actions</p>
+                    </div>
+                    <div className="SB-actions">
+                        {conjure.Actions.map((action, i) => (
+                            <p key={i}><em><strong>{action.label}</strong> {action.sublabel}</em> {action.description}</p>
+                        ))}
+                    </div>
+                </div>) : ""}
+                {conjure.BonusActions ?
+                (<div>
+                    <div className="SB-actionlabel">
+                        <p>Bonus Actions</p>
+                    </div>
+                    <div className="SB-actions">
+                        {conjure.BonusActions.map((ba, i) => (
+                            <p key={i}><em><strong>{ba.label}</strong> {ba.sublabel}</em> {ba.description}</p>
+                        ))}
+                    </div>
+                </div>): ""}
                 <AddButton onClick={this.props.onClick}></AddButton>
             </div>
         );

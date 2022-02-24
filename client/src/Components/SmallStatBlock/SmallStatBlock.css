@@ -90,3 +90,18 @@
 .SB-description {
     font-size: 14px;
 }
+
+.SB-actionlabel {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.SB-actions {
+    font-size: 14px;
+}
+
+.SB-expanded {
+    overflow: hidden;
+    display: block;
+    transition: max-height 0.5s linear;
+}

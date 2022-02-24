@@ -2,6 +2,7 @@ import React from "react";
 import FindFamiliar from "./FindFamiliar";
 import './SpellViewer.css';
 import SummonFey from "./SummonFey";
+import SummonLesserDemons from "./SummonLesserDemons";
 
 class SpellViewer extends React.Component {
     constructor(props) {
@@ -16,6 +17,8 @@ class SpellViewer extends React.Component {
                 return <FindFamiliar></FindFamiliar>;
             case "Summon Fey":
                 return <SummonFey></SummonFey>;
+            case "Summon Lesser Demons":
+                return <SummonLesserDemons />;
             default: 
                 return <FindFamiliar></FindFamiliar>;
         }

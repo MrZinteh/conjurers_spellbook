@@ -44,8 +44,8 @@ class MinionViewer extends React.Component {
         return (
             <div className="MinionViewer">
                 <h1 className="minionViewerTitle">Minions:</h1>
-                {this.state.minions.map((minion) => (
-                    <SmallStatBlock conjure={this.props.conjures[minion.spell_source][minion.name]} onClick={() => this.deleteMinion(minion.name)}></SmallStatBlock>
+                {this.state.minions.map((minion, i) => (
+                    <SmallStatBlock key={i} conjure={this.props.conjures[minion.spell_source][minion.name]} onClick={() => this.deleteMinion(minion.name)}></SmallStatBlock>
                 ))}
                 
             </div>

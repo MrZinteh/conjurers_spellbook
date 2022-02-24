@@ -9,6 +9,7 @@ class PossibleConjures extends React.Component {
     }
 
     conjureMinion(name, type, spellSource) {
+        console.log(type);
         fetch(`/api/minions?name=${name}&type=${type}&spellSource=${spellSource}`, {
             headers: {
               'Accept': 'application/json',
@@ -26,7 +27,7 @@ class PossibleConjures extends React.Component {
         return (
             <div className="PossibleConjures">
                 {Object.keys(this.props.conjures[this.props.selectedSpell]).map((c) => (
-                    <SmallStatBlock key={c} conjure={this.props.conjures[this.props.selectedSpell][c]} onClick={() => this.conjureMinion(c, 'Familiar', this.props.selectedSpell)}></SmallStatBlock>
+                    <SmallStatBlock key={c} conjure={this.props.conjures[this.props.selectedSpell][c]} onClick={() => this.conjureMinion(c, this.props.conjures[this.props.selectedSpell][c].type, this.props.selectedSpell)}></SmallStatBlock>
                 ))}
             </div>
         );

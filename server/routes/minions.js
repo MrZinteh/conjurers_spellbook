@@ -21,7 +21,6 @@ exports.minionsPost = async (req, res, next) => {
             console.log(err);
             res.status(403).send(err);
         } else {
-            console.log("success")
             res.status(200).json({
                 name: name,
                 type: type,
