@@ -14,6 +14,7 @@ class App extends React.Component {
     this.selectSpell = this.selectSpell.bind(this);
     this.feySpiritMapper = this.feySpiritMapper.bind(this);
     this.lesserDemonMapper = this.lesserDemonMapper.bind(this);
+    this.shadowSpawnMapper = this.shadowSpawnMapper.bind(this);
     this.conjures = {
       "Find Familiar": {
           "Bat": {
@@ -538,6 +539,104 @@ class App extends React.Component {
             ]
         },
       },
+      "Summon Shadowspawn Base": {
+        "Fury": {
+            name: "",
+            subName: "Fury",
+            type: "Shadowspawn",
+            size: "medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "35 + 15 for each spell level above 3rd",
+            Speed: "40ft",
+            Stats: {
+                STR: "13 (+1)",
+                DEX: "16 (+3)",
+                CON: "15 (+2)",
+                INT: "4 (-3)",
+                WIS: "10 (+0)",
+                CHA: "16 (+3)"
+            },
+            Skills: "--",
+            DamageResistances: "Necrotic",
+            DamageImmunities: "Frightened",
+            ConditionImmunities: null,
+            Senses: "Darkvision 120ft., Pas. Perception 10",
+            Languages: "Understands the languages you speak",
+            Description: [
+                {label: "Terror Frenzy", value: "The spirit has advantage on attack rolls against frightened creatures."}
+            ],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The fey makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Chilling Rend.", sublabel: "Melee Weapon Attack:", description: "Your spell attack modifier to hit, reach 5 ft., one target. Hit: 1d12 + 3 + the spell’s level cold damage."},
+                {label: "Dreadful Scream (1/Day).", sublabel: "", description: "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened of the spirit for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."}
+            ],
+            BonusActions: null
+        },
+        "Despair": {
+            name: "",
+            subName: "Despair",
+            type: "Shadowspawn",
+            size: "medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "35 + 15 for each spell level above 3rd",
+            Speed: "40ft",
+            Stats: {
+                STR: "13 (+1)",
+                DEX: "16 (+3)",
+                CON: "15 (+2)",
+                INT: "4 (-3)",
+                WIS: "10 (+0)",
+                CHA: "16 (+3)"
+            },
+            Skills: "--",
+            DamageResistances: "Necrotic",
+            DamageImmunities: "Frightened",
+            ConditionImmunities: null,
+            Senses: "Darkvision 120ft., Pas. Perception 10",
+            Languages: "Understands the languages you speak",
+            Description: [
+                {label: "Weight of Sorrow", value: "Any creature, other than you, that starts its turn within 5 feet of the spirit has its speed reduced by 20 feet until the start of that creature’s next turn."}
+            ],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The fey makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Chilling Rend.", sublabel: "Melee Weapon Attack:", description: "Your spell attack modifier to hit, reach 5 ft., one target. Hit: 1d12 + 3 + the spell’s level cold damage."},
+                {label: "Dreadful Scream (1/Day).", sublabel: "", description: "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened of the spirit for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."}
+            ],
+            BonusActions: null
+        },
+        "Fear": {
+            name: "",
+            subName: "Fear",
+            type: "Shadowspawn",
+            size: "medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "35 + 15 for each spell level above 3rd",
+            Speed: "40ft",
+            Stats: {
+                STR: "13 (+1)",
+                DEX: "16 (+3)",
+                CON: "15 (+2)",
+                INT: "4 (-3)",
+                WIS: "10 (+0)",
+                CHA: "16 (+3)"
+            },
+            Skills: "--",
+            DamageResistances: "Necrotic",
+            DamageImmunities: "Frightened",
+            ConditionImmunities: null,
+            Senses: "Darkvision 120ft., Pas. Perception 10",
+            Languages: "Understands the languages you speak",
+            Description: [],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The fey makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Chilling Rend.", sublabel: "Melee Weapon Attack:", description: "Your spell attack modifier to hit, reach 5 ft., one target. Hit: 1d12 + 3 + the spell’s level cold damage."},
+                {label: "Dreadful Scream (1/Day).", sublabel: "", description: "The spirit screams. Each creature within 30 feet of it must succeed on a Wisdom saving throw against your spell save DC or be frightened of the spirit for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."}
+            ],
+            BonusActions: [
+                {label: "Shadow Stealth.", sublabel: "", description: "While in dim light or darkness, the spirit takes the Hide action."}
+            ]
+        },
+      },
       "Demons": {
         "Abyssal Chicken": {
             name: "Abyssal Chicken",
@@ -734,10 +833,14 @@ class App extends React.Component {
       "Summon Fey": {
       },
       "Summon Lesser Demons": {
+      },
+      "Summon Shadowspawn": {
+
       }
     }
     this.feySpiritMapper();
-    this.lesserDemonMapper()
+    this.lesserDemonMapper();
+    this.shadowSpawnMapper();
   }
 
   toggleRecentlyConjured() {
@@ -779,13 +882,23 @@ class App extends React.Component {
                     const cr = (demon.cr in crMap) ? crMap[demon.cr] : demon.cr; 
                     this.conjures["Summon Lesser Demons"][name] = {...this.conjures["Demons"][name], subName: cr}
                 });
-                console.log(this.conjures["Summon Lesser Demons"]);
             }
         })
   }
 
-  componentDidMount() {
-      this.feySpiritMapper();
+  shadowSpawnMapper() {
+      fetch(`/api/shadowSpirits`)
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.rowCount > 0) {
+                const shadowSpirits = data.rows;
+                shadowSpirits.forEach((spirit) => {
+                    const name = spirit.name;
+                    const type = spirit.type;
+                    this.conjures["Summon Shadowspawn"][name] = {...this.conjures["Summon Shadowspawn Base"][type], name: name};
+                });
+            }
+        })
   }
 
   render() {

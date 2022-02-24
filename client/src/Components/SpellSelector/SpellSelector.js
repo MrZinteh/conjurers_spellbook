@@ -14,7 +14,7 @@ class SpellSelector extends React.Component {
                 <button className="Spell" onClick={() => this.props.selectSpell("Find Familiar")}>Find Familiar</button>
                 <button className="Spell" onClick={() => this.props.selectSpell("Summon Fey")}>Summon Fey</button>
                 <button className="Spell" onClick={() => this.props.selectSpell("Summon Lesser Demons")}>Summon Lesser Demons</button>
-                <button className="Spell">Summon Shadow Spirit</button>
+                <button className="Spell" onClick={() => this.props.selectSpell("Summon Shadowspawn")}>Summon Shadowspawn</button>
                 <button className="Spell">Conjure Minor Elemental</button>
                 <button className="Spell">Summon Abberation</button>
                 <button className="Spell">Summon Construct</button>

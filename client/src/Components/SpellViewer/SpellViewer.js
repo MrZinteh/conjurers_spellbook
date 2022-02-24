@@ -3,6 +3,7 @@ import FindFamiliar from "./FindFamiliar";
 import './SpellViewer.css';
 import SummonFey from "./SummonFey";
 import SummonLesserDemons from "./SummonLesserDemons";
+import SummonShadowspawn from "./SummonShadowspawn";
 
 class SpellViewer extends React.Component {
     constructor(props) {
@@ -19,6 +20,8 @@ class SpellViewer extends React.Component {
                 return <SummonFey></SummonFey>;
             case "Summon Lesser Demons":
                 return <SummonLesserDemons />;
+            case "Summon Shadowspawn":
+                return <SummonShadowspawn />;
             default: 
                 return <FindFamiliar></FindFamiliar>;
         }
