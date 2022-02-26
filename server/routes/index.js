@@ -18,6 +18,7 @@ router.get('/shadowSpirits', shadowSpiritsRoutes.shadowSpiritsGet);
 router.get('/abberations', abberationsRoutes.abberationsGet);
 router.get('/constructs', constructsRoutes.constructsGet);
 router.get('/elementals', elementalsRoutes.elementalsGet);
+router.get('/elementals/minor', elementalsRoutes.minorElementalsGet);
 router.get('/draconicSpirits', draconicSpiritsRoutes.draconicSpiritsGet);
 router.get('/fiends', fiendsRoutes.fiendsGet);
 router.get('/fiends/lesserDemons', fiendsRoutes.lesserDemonsGet);

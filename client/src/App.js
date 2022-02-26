@@ -15,6 +15,7 @@ class App extends React.Component {
     this.feySpiritMapper = this.feySpiritMapper.bind(this);
     this.lesserDemonMapper = this.lesserDemonMapper.bind(this);
     this.shadowSpawnMapper = this.shadowSpawnMapper.bind(this);
+    this.minorElementalMapper = this.minorElementalMapper.bind(this);
     this.conjures = {
       "Find Familiar": {
           "Bat": {
@@ -34,6 +35,8 @@ class App extends React.Component {
                     CHA: "4 (-3)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -63,6 +66,8 @@ class App extends React.Component {
                     CHA: "7 (-2)"
                 },
                 Skills: "Perception +3, Stealth +4",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -91,6 +96,8 @@ class App extends React.Component {
                     CHA: "2 (-4)"
                 },
                 Skills: "Stealth +2",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -119,6 +126,8 @@ class App extends React.Component {
                     CHA: "3 (-4)"
                 },
                 Skills: "Perception +1, Stealth +3",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -148,6 +157,8 @@ class App extends React.Component {
                     CHA: "6 (-2)"
                 },
                 Skills: "Perception +4",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -176,6 +187,8 @@ class App extends React.Component {
                     CHA: "3 (-4)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -202,6 +215,8 @@ class App extends React.Component {
                     CHA: "4 (-3)"
                 },
                 Skills: "Perception +2, Stealth +4",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -232,6 +247,8 @@ class App extends React.Component {
                     CHA: "7 (-2)"
                 },
                 Skills: "Perception +3, Stealth +3",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -261,6 +278,8 @@ class App extends React.Component {
                     CHA: "3 (-4)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -287,6 +306,8 @@ class App extends React.Component {
                     CHA: "2 (-4)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -315,6 +336,8 @@ class App extends React.Component {
                     CHA: "4 (-3)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -343,6 +366,8 @@ class App extends React.Component {
                     CHA: "6 (-2)"
                 },
                 Skills: "Perception +3",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -371,6 +396,8 @@ class App extends React.Component {
                     CHA: "2 (-4)"
                 },
                 Skills: "--",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -399,6 +426,8 @@ class App extends React.Component {
                     CHA: "2 (-4)"
                 },
                 Skills: "Stealth +4",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -429,6 +458,8 @@ class App extends React.Component {
                     CHA: "3 (-4)"
                 },
                 Skills: "Perception +3, Stealth +5",
+                SavingThrows: null,
+                DamageVulnerabilities: null,
                 DamageResistances: null,
                 DamageImmunities: null,
                 ConditionImmunities: null,
@@ -459,6 +490,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: null,
             DamageImmunities: null,
             ConditionImmunities: null,
@@ -491,6 +524,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: null,
             DamageImmunities: null,
             ConditionImmunities: null,
@@ -523,6 +558,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: null,
             DamageImmunities: null,
             ConditionImmunities: null,
@@ -557,6 +594,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
             DamageImmunities: "Frightened",
             ConditionImmunities: null,
@@ -589,6 +628,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
             DamageImmunities: "Frightened",
             ConditionImmunities: null,
@@ -621,6 +662,8 @@ class App extends React.Component {
                 CHA: "16 (+3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
             DamageImmunities: "Frightened",
             ConditionImmunities: null,
@@ -655,6 +698,8 @@ class App extends React.Component {
                 CHA: "5 (-3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
             DamageImmunities: "Poison",
             ConditionImmunities: "Blinded, Poisoned",
@@ -687,6 +732,8 @@ class App extends React.Component {
                 CHA: "5 (-3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
             DamageImmunities: "Poison",
             ConditionImmunities: "Charmed, Frightened, Poisoned",
@@ -715,6 +762,8 @@ class App extends React.Component {
                 CHA: "5 (-3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
             DamageImmunities: "Poison",
             ConditionImmunities: "Poisoned",
@@ -746,6 +795,8 @@ class App extends React.Component {
                 CHA: "12 (+1)"
             },
             Skills: "Deception +3, Performance +3",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
             DamageImmunities: "Poison",
             ConditionImmunities: "Poisoned",
@@ -783,6 +834,8 @@ class App extends React.Component {
                 CHA: "5 (-3)"
             },
             Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
             DamageImmunities: "Poison",
             ConditionImmunities: "Charmed, Frightened, Poisoned",
@@ -813,6 +866,8 @@ class App extends React.Component {
                 CHA: "10 (+0)"
             },
             Skills: "Stealth +5",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning; Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
             DamageImmunities: "Poison",
             ConditionImmunities: "Poisoned",
@@ -830,17 +885,294 @@ class App extends React.Component {
             BonusActions: null
         },
       },
+      "Elementals": {
+        "Steam Mephit": {
+            name: "Steam Mephit",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "10",
+            HP: "21",
+            Speed: "30ft., fly 30ft.",
+            Stats: {
+                STR: "5 (-3)",
+                DEX: "11 (+0)",
+                CON: "10 (+0)",
+                INT: "11 (+0)",
+                WIS: "10 (+0)",
+                CHA: "12 (+1)"
+            },
+            Skills: "--",
+            DamageResistances: null,
+            DamageImmunities: "Fire, Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Aquan, Ignan",
+            Description: [
+                {label: "Death Burst.", value: "When the mephit dies, it explodes in a cloud of steam. Each creature within 5 feet of the mephit must succeed on a DC 10 Dexterity saving throw or take 4 (1d8) fire damage."},
+                {label: "Innate Spellcasting (1/day).", value: "The mephit can innately cast blur, requiring no material components. Its innate spellcasting ability is Charisma."},
+            ],
+            Actions: [
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+2 to hit, reach 5 ft., one creature. Hit: 2 (1d4) slashing damage plus 2 (1d4) fire damage."},
+                {label: "Steam Breath (Recharge 6).", sublabel: "", description: "The mephit exhales a 15- foot cone of scalding steam. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 4 (1d8) fire damage on a failed save, or half as much damage on a successful one."}
+            ],
+            BonusActions: null
+        },
+        "Dust Mephit": {
+            name: "Dust Mephit",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "12",
+            HP: "17",
+            Speed: "30ft., fly 30ft.",
+            Stats: {
+                STR: "5 (-3)",
+                DEX: "14 (+2)",
+                CON: "10 (+0)",
+                INT: "9 (-1)",
+                WIS: "11 (+0)",
+                CHA: "10 (+0)"
+            },
+            Skills: "Perception +2, Stealth +4",
+            SavingThrows: null,
+            DamageVulnerabilities: "Fire",
+            DamageResistances: null,
+            DamageImmunities: "Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 12",
+            Languages: "Auran, Terran",
+            Description: [
+                {label: "Death Burst.", value: "When the mephit dies, it explodes in a burst of dust. Each creature within 5 feet of it must then succeed on a DC 10 Constitution saving throw or be blinded for 1 minute. A blinded creature can repeat the saving throw on each of its turns, ending the effect on itself on a success."},
+                {label: "Innate Spellcasting (1/day).", value: "The mephit can innately cast sleep, requiring no material components. Its innate spellcasting ability is Charisma."},
+            ],
+            Actions: [
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage."},
+                {label: "Blinding Breath (Recharge 6).", sublabel: "", description: "The mephit exhales a 15- foot cone of blinding dust. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."}
+            ],
+            BonusActions: null
+        },
+        "Ice Mephit": {
+            name: "Ice Mephit",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "11",
+            HP: "21",
+            Speed: "30ft., fly 30ft.",
+            Stats: {
+                STR: "7 (-2)",
+                DEX: "13 (+1)",
+                CON: "10 (+0)",
+                INT: "9 (-1)",
+                WIS: "11 (+0)",
+                CHA: "12 (+1)"
+            },
+            Skills: "Perception +2, Stealth +3",
+            SavingThrows: null,
+            DamageVulnerabilities: "Bludgeoning, Fire",
+            DamageResistances: null,
+            DamageImmunities: "Cold, Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 12",
+            Languages: "Aquan, Auran",
+            Description: [
+                {label: "Death Burst.", value: "When the mephit dies, it explodes in a burst of jagged ice. Each creature within 5 feet of it must make a DC 10 Dexterity saving throw, taking 4 (1d8) slashing damage on a failed save, or half as much damage on a successful one."},
+                {label: "False Appearance.", value: "While the mephit remains motionless, it is indistinguishable from an ordinary shard of ice."},
+                {label: "Innate Spellcasting (1/day).", value: "The mephit can innately cast fog cloud, requiring no material components. Its innate spellcasting ability is Charisma."},
+            ],
+            Actions: [
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) cold damage."},
+                {label: "Frost Breath (Recharge 6).", sublabel: "", description: "The mephit exhales a 15- foot cone of cold air. Each creature in that area must succeed on a DC 10 Dexterity saving throw, taking 5 (2d4) cold damage on a failed save, or half as much damage on a successful one."}
+            ],
+            BonusActions: null
+        },
+        "Smoke Mephit": {
+            name: "Smoke Mephit",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "12",
+            HP: "22",
+            Speed: "30ft., fly 30ft.",
+            Stats: {
+                STR: "6 (-2)",
+                DEX: "14 (+2)",
+                CON: "12 (+1)",
+                INT: "10 (+0)",
+                WIS: "10 (+0)",
+                CHA: "11 (+0)"
+            },
+            Skills: "Perception +2, Stealth +4",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: null,
+            DamageImmunities: "Fire, Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 12",
+            Languages: "Auran, Ignan",
+            Description: [
+                {label: "Death Burst.", value: "When the mephit dies, it leaves behind a cloud of smoke that fills a 5-foot-radius sphere centered on its space. The sphere is heavily obscured. Wind disperses the cloud, which otherwise lasts for 1 minute."},
+                {label: "Innate Spellcasting (1/day).", value: "The mephit can innately cast dancing lights, requiring no material components. Its innate spellcasting ability is Charisma."},
+            ],
+            Actions: [
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+4 to hit, reach 5 ft., one creature. Hit: 4 (1d4 + 2) slashing damage."},
+                {label: "Cinder Breath (Recharge 6).", sublabel: "", description: "The mephit exhales a 15-foot cone of smoldering ash. Each creature in that area must succeed on a DC 10 Dexterity saving throw or be blinded until the end of the mephit’s next turn."}
+            ],
+            BonusActions: null
+        },
+        "Magma Mephit": {
+            name: "Magma Mephit",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "11",
+            HP: "22",
+            Speed: "30ft., fly 30ft.",
+            Stats: {
+                STR: "8 (-1)",
+                DEX: "12 (+1)",
+                CON: "12 (+1)",
+                INT: "7 (-2)",
+                WIS: "10 (+0)",
+                CHA: "10 (+0)"
+            },
+            Skills: "Stealth +3",
+            SavingThrows: null,
+            DamageVulnerabilities: "Cold",
+            DamageResistances: null,
+            DamageImmunities: "Fire, Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Ignan, Terran",
+            Description: [
+                {label: "Death Burst.", value: "When the mephit dies, it explodes in a burst of lava. Each creature within 5 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one."},
+                {label: "False Appearance.", value: "While the mephit remains motionless, it is indistinguishable from an ordinary mound of magma."},
+                {label: "Innate Spellcasting (1/day).", value: "The mephit can innately cast heat metal (spell save DC 10), requiring no material components. Its innate spellcasting ability is Charisma."},
+            ],
+            Actions: [
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+3 to hit, reach 5 ft., one creature. Hit: 3 (1d4 + 1) slashing damage plus 2 (1d4) fire damage."},
+                {label: "Fire Breath (Recharge 6).", sublabel: "", description: "The mephit exhales a 15-foot cone of fire. Each creature in that area must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one."}
+            ],
+            BonusActions: null
+        },
+        "Magmin": {
+            name: "Magmin",
+            subName: null,
+            type: "Elemental",
+            size: "Small",
+            AC: "14",
+            HP: "9",
+            Speed: "30ft.",
+            Stats: {
+                STR: "7 (-2)",
+                DEX: "15 (+2)",
+                CON: "12 (+1)",
+                INT: "8 (-1)",
+                WIS: "11 (+0)",
+                CHA: "10 (+0)"
+            },
+            Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
+            DamageImmunities: "Fire",
+            ConditionImmunities: null,
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Ignan,",
+            Description: [
+                {label: "Death Burst.", value: "When the magmin dies, it explodes in a burst of fire and magma. Each creature within 10 feet of it must make a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one. Flammable objects that aren't being worn or carried in that area are ignited."},
+                {label: "Ignited Illumination.", value: "As a bonus action, the magmin can set itself ablaze or extinguish its flames. While ablaze, the magmin sheds bright light in a 10-foot radius and dim light for an additional 10 feet."},
+            ],
+            Actions: [
+                {label: "Touch.", sublabel: "Melee Weapon Attack:", description: "+4 to hit, reach 5 ft., one target. Hit: 7 (2d6) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 3 (1d6) fire damage at the end of each of its turns."},
+            ],
+            BonusActions: null
+        },
+        "Azer": {
+            name: "Azer",
+            subName: null,
+            type: "Elemental",
+            size: "Medium",
+            AC: "17 (Natural Armor, Shield)",
+            HP: "39",
+            Speed: "30ft.",
+            Stats: {
+                STR: "17 (+3)",
+                DEX: "12 (+1)",
+                CON: "15 (+2)",
+                INT: "12 (+1)",
+                WIS: "13 (+1)",
+                CHA: "10 (+0)"
+            },
+            Skills: "--",
+            SavingThrows: "CON +4",
+            DamageVulnerabilities: null,
+            DamageResistances: null,
+            DamageImmunities: "Fire, Poison",
+            ConditionImmunities: "Poisoned",
+            Senses: "Pas. Perception 11",
+            Languages: "Ignan",
+            Description: [
+                {label: "Heated Body.", value: "A creature that touches the azer or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage."},
+                {label: "Heated Weapons.", value: "When the azer hits with a metal melee weapon, it deals an extra 3 (1d6) fire damage (included in the attack)."},
+                {label: "Illumination.", value: "The azer sheds bright light in a 10-­foot radius and dim light for an additional 10 feet."},
+            ],
+            Actions: [
+                {label: "Warhammer.", sublabel: "Melee Weapon Attack:", description: "+5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) bludgeoning damage, or 8 (1d10 + 3) bludgeoning damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage."},
+            ],
+            BonusActions: null
+        },
+        "Gargoyle": {
+            name: "Gargoyle",
+            subName: null,
+            type: "Elemental",
+            size: "Medium",
+            AC: "15 (Natural Armor)",
+            HP: "52",
+            Speed: "30ft., fly 60ft.",
+            Stats: {
+                STR: "15 (+2)",
+                DEX: "11 (+0)",
+                CON: "16 (+3)",
+                INT: "6 (-2)",
+                WIS: "11 (+0)",
+                CHA: "7 (-2)"
+            },
+            Skills: "--",
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks that aren't Adamantine",
+            DamageImmunities: "Poison",
+            ConditionImmunities: "Exhaustion, Petrified, Poisoned",
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Terran",
+            Description: [
+                {label: "False Appearance.", value: "While the gargoyle remains motionless, it is indistinguishable from an inanimate statue."},
+            ],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The gargoyle makes two attacks: one with its bite and one with its claws."},
+                {label: "Bite.", sublabel: "Melee Weapon Attack:", description: "+4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) piercing damage."},
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "+4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage."},
+            ],
+            BonusActions: null
+        },
+      },
       "Summon Fey": {
       },
       "Summon Lesser Demons": {
       },
       "Summon Shadowspawn": {
 
+      },
+      "Conjure Minor Elementals": {
+
       }
     }
     this.feySpiritMapper();
     this.lesserDemonMapper();
     this.shadowSpawnMapper();
+    this.minorElementalMapper();
   }
 
   toggleRecentlyConjured() {
@@ -896,6 +1228,26 @@ class App extends React.Component {
                     const name = spirit.name;
                     const type = spirit.type;
                     this.conjures["Summon Shadowspawn"][name] = {...this.conjures["Summon Shadowspawn Base"][type], name: name};
+                });
+            }
+        })
+  }
+
+  minorElementalMapper() {
+    fetch(`/api/elementals/minor`)
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.rowCount > 0) {
+                const minorElementals = data.rows;
+                minorElementals.forEach((elemental) => {
+                    const name = elemental.name;
+                    const crMap = {
+                        0.125: "1/8",
+                        0.25: "1/4",
+                        0.5: "1/2",
+                    }
+                    const cr = (elemental.cr in crMap) ? crMap[elemental.cr] : elemental.cr; 
+                    this.conjures["Conjure Minor Elementals"][name] = {...this.conjures["Elementals"][name], subName: cr}
                 });
             }
         })

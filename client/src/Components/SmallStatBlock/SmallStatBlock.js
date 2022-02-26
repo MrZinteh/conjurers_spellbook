@@ -52,6 +52,11 @@ class SmallStatBlock extends React.Component {
                 </div>
                 <div className="SB-tidbits">
                     <div className="SB-Skills"><span className="tidbitLabel">Skills</span><span className="tidbitValue"> {conjure.Skills}</span></div>
+                    {conjure.SavingThrows ? <div className="SB-SavingThrows"><span className="tidbitLabel">Saving Throws</span><span className="tidbitValue"> {conjure.SavingThrows}</span></div> : ""}
+                    {conjure.DamageVulnerabilities ? <div className="SB-DamageVulnerabilities"><span className="tidbitLabel">Damage Vulnerabilities</span><span className="tidbitValue"> {conjure.DamageVulnerabilities}</span></div> : ""}
+                    {conjure.DamageResistances ? <div className="SB-DamageResistances"><span className="tidbitLabel">Damage Resistances</span><span className="tidbitValue"> {conjure.DamageResistances}</span></div> : ""}
+                    {conjure.DamageImmunities ? <div className="SB-DamageImmunities"><span className="tidbitLabel">Damage Immunities</span><span className="tidbitValue"> {conjure.DamageImmunities}</span></div> : ""}
+                    {conjure.ConditionImmunities ? <div className="SB-ConditionImmunities"><span className="tidbitLabel">Condition Immunities</span><span className="tidbitValue"> {conjure.ConditionImmunities}</span></div> : ""}
                     <div className="SB-Senses"><span className="tidbitLabel">Senses</span><span className="tidbitValue"> {conjure.Senses}</span></div>
                     <div className="SB-Languages"><span className="tidbitLabel">Languages</span><span className="tidbitValue"> {conjure.Languages}</span></div>
                 </div>

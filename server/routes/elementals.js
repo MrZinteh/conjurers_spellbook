@@ -11,3 +11,15 @@ exports.elementalsGet = async (req, res, next) => {
         }
     })
 }
+
+exports.minorElementalsGet = async (req, res, next) => {
+    db.query('SELECT * FROM elementals WHERE cr <= 2', (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send(err);
+        }
+        else {
+            res.send(result);
+        }
+    })
+}
