@@ -61,9 +61,17 @@ class SmallStatBlock extends React.Component {
                     <div className="SB-Languages"><span className="tidbitLabel">Languages</span><span className="tidbitValue"> {conjure.Languages}</span></div>
                 </div>
                 <div className="SB-description">
-                    {conjure.Description.map((description) => (
-                        <p key={description.value}><em><strong>{description.label}</strong></em> {description.value}</p>
-                    ))}
+                    {conjure.Description.map((description) => {
+                        let desc = [<p key={description.value}><em><strong>{description.label}</strong></em> {description.value}</p>];
+                        if (description.spells) {
+                            Object.keys(description.spells).forEach((key, index) => desc.push(
+                            <p key={`${conjure.name}_spells_${index}`}>
+                                {key}: <em>{description.spells[key]}</em>
+                            </p>
+                            ))
+                        }
+                        return desc
+                    })}
                 </div>
                 {conjure.Actions ? 
                 (<div>
@@ -84,6 +92,17 @@ class SmallStatBlock extends React.Component {
                     <div className="SB-actions">
                         {conjure.BonusActions.map((ba, i) => (
                             <p key={i}><em><strong>{ba.label}</strong> {ba.sublabel}</em> {ba.description}</p>
+                        ))}
+                    </div>
+                </div>): ""}
+                {conjure.Reactions ?
+                (<div>
+                    <div className="SB-actionlabel">
+                        <p>Reactions</p>
+                    </div>
+                    <div className="SB-actions">
+                        {conjure.Reactions.map((reaction, i) => (
+                            <p key={i}><em><strong>{reaction.label}</strong> {reaction.sublabel}</em> {reaction.description}</p>
                         ))}
                     </div>
                 </div>): ""}
