@@ -15,7 +15,7 @@ const router = express.Router();
 router.get('/familiars', familiarsRoutes.familiarsGet);
 router.get('/feySpirits', feySpiritRoutes.feySpiritsGet);
 router.get('/shadowSpirits', shadowSpiritsRoutes.shadowSpiritsGet);
-router.get('/abberations', abberationsRoutes.abberationsGet);
+router.get('/aberrations', abberationsRoutes.abberationsGet);
 router.get('/constructs', constructsRoutes.constructsGet);
 router.get('/elementals', elementalsRoutes.elementalsGet);
 router.get('/elementals/minor', elementalsRoutes.minorElementalsGet);

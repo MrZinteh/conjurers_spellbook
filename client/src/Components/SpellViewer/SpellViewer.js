@@ -2,6 +2,7 @@ import React from "react";
 import ConjureMinorElementals from "./ConjureMinorElementals";
 import FindFamiliar from "./FindFamiliar";
 import './SpellViewer.css';
+import SummonAberration from "./SummonAberration";
 import SummonFey from "./SummonFey";
 import SummonLesserDemons from "./SummonLesserDemons";
 import SummonShadowspawn from "./SummonShadowspawn";
@@ -25,6 +26,8 @@ class SpellViewer extends React.Component {
                 return <SummonShadowspawn />;
             case "Conjure Minor Elementals":
                 return <ConjureMinorElementals />;
+            case "Summon Aberration":
+                return <SummonAberration />;
             default: 
                 return <FindFamiliar></FindFamiliar>;
         }

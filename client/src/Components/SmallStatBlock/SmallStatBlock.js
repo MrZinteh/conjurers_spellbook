@@ -51,7 +51,7 @@ class SmallStatBlock extends React.Component {
                     </div>
                 </div>
                 <div className="SB-tidbits">
-                    <div className="SB-Skills"><span className="tidbitLabel">Skills</span><span className="tidbitValue"> {conjure.Skills}</span></div>
+                    {conjure.Skills ? <div className="SB-Skills"><span className="tidbitLabel">Skills</span><span className="tidbitValue"> {conjure.Skills}</span></div> : ""}
                     {conjure.SavingThrows ? <div className="SB-SavingThrows"><span className="tidbitLabel">Saving Throws</span><span className="tidbitValue"> {conjure.SavingThrows}</span></div> : ""}
                     {conjure.DamageVulnerabilities ? <div className="SB-DamageVulnerabilities"><span className="tidbitLabel">Damage Vulnerabilities</span><span className="tidbitValue"> {conjure.DamageVulnerabilities}</span></div> : ""}
                     {conjure.DamageResistances ? <div className="SB-DamageResistances"><span className="tidbitLabel">Damage Resistances</span><span className="tidbitValue"> {conjure.DamageResistances}</span></div> : ""}

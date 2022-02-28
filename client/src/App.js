@@ -16,6 +16,7 @@ class App extends React.Component {
     this.lesserDemonMapper = this.lesserDemonMapper.bind(this);
     this.shadowSpawnMapper = this.shadowSpawnMapper.bind(this);
     this.minorElementalMapper = this.minorElementalMapper.bind(this);
+    this.AberrationMapper = this.AberrationMapper.bind(this);
     this.conjures = {
       "Find Familiar": {
           "Bat": {
@@ -34,7 +35,7 @@ class App extends React.Component {
                     WIS: "12 (+1)",
                     CHA: "4 (-3)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -186,7 +187,7 @@ class App extends React.Component {
                     WIS: "8 (-1)",
                     CHA: "3 (-4)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -277,7 +278,7 @@ class App extends React.Component {
                     WIS: "10 (+0)",
                     CHA: "3 (-4)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -305,7 +306,7 @@ class App extends React.Component {
                     WIS: "7 (-2)",
                     CHA: "2 (-4)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -335,7 +336,7 @@ class App extends React.Component {
                     WIS: "10 (+0)",
                     CHA: "4 (-3)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -395,7 +396,7 @@ class App extends React.Component {
                     WIS: "10 (+0)",
                     CHA: "2 (-4)"
                 },
-                Skills: "--",
+                Skills: null,
                 SavingThrows: null,
                 DamageVulnerabilities: null,
                 DamageResistances: null,
@@ -489,7 +490,7 @@ class App extends React.Component {
                 WIS: "11 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: null,
@@ -523,7 +524,7 @@ class App extends React.Component {
                 WIS: "11 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: null,
@@ -557,7 +558,7 @@ class App extends React.Component {
                 WIS: "11 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: null,
@@ -593,7 +594,7 @@ class App extends React.Component {
                 WIS: "10 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
@@ -627,7 +628,7 @@ class App extends React.Component {
                 WIS: "10 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
@@ -661,7 +662,7 @@ class App extends React.Component {
                 WIS: "10 (+0)",
                 CHA: "16 (+3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Necrotic",
@@ -678,6 +679,105 @@ class App extends React.Component {
             BonusActions: [
                 {label: "Shadow Stealth.", sublabel: "", description: "While in dim light or darkness, the spirit takes the Hide action."}
             ]
+        },
+      },
+      "Summon Aberration Base": {
+        "Beholderkin": {
+            name: "",
+            subName: "Beholderkin",
+            type: "Aberration",
+            size: "Medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "40 + 10 for each spell level above 4th",
+            Speed: "30ft., fly 30ft. (hover)",
+            Stats: {
+                STR: "16 (+3)",
+                DEX: "10 (+0)",
+                CON: "15 (+2)",
+                INT: "16 (+3)",
+                WIS: "10 (+0)",
+                CHA: "6 (-2)"
+            },
+            Skills: null,
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: null,
+            DamageImmunities: "Psychic",
+            ConditionImmunities: null,
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Understands the languages you speakDeep Speech, understands the languages you speak",
+            Description: [],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The aberration makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Eye Ray.", sublabel: "Ranged Spell Attack:", description: "Your spell attack modifier to hit, range 150 ft., one creature. Hit: 1d8 + 3 + the spell’s level psychic damage."},
+            ],
+            BonusActions: null
+        },
+        "Slaad": {
+            name: "",
+            subName: "Slaad",
+            type: "Aberration",
+            size: "Medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "40 + 10 for each spell level above 4th",
+            Speed: "30ft.",
+            Stats: {
+                STR: "16 (+3)",
+                DEX: "10 (+0)",
+                CON: "15 (+2)",
+                INT: "16 (+3)",
+                WIS: "10 (+0)",
+                CHA: "6 (-2)"
+            },
+            Skills: null,
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: null,
+            DamageImmunities: "Psychic",
+            ConditionImmunities: null,
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Understands the languages you speakDeep Speech, understands the languages you speak",
+            Description: [
+                {label: "Regeneration.", value: "The aberration regains 5 hit points at the start of its turn if it has at least 1 hit point."},
+            ],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The aberration makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Claws.", sublabel: "Melee Weapon Attack:", description: "Your spell attack modifier to hit, reach 5 ft., one target. Hit: 1d10 + 3 + the spell’s level slashing damage. If the target is a creature, it can’t regain hit points until the start of the aberration’s next turn."},
+            ],
+            BonusActions: null
+        },
+        "Star Spawn": {
+            name: "",
+            subName: "Star Spawn",
+            type: "Aberration",
+            size: "Medium",
+            AC: "11 + the level of the spell (natural armor)",
+            HP: "40 + 10 for each spell level above 4th",
+            Speed: "30ft.",
+            Stats: {
+                STR: "16 (+3)",
+                DEX: "10 (+0)",
+                CON: "15 (+2)",
+                INT: "16 (+3)",
+                WIS: "10 (+0)",
+                CHA: "6 (-2)"
+            },
+            Skills: null,
+            SavingThrows: null,
+            DamageVulnerabilities: null,
+            DamageResistances: null,
+            DamageImmunities: "Psychic",
+            ConditionImmunities: null,
+            Senses: "Darkvision 60ft., Pas. Perception 10",
+            Languages: "Understands the languages you speakDeep Speech, understands the languages you speak",
+            Description: [
+                {label: "Whispering Aura.", value: "At the start of each of the aberration’s turns, each creature within 5 feet of the aberration must succeed on a Wisdom saving throw against your spell save DC or take 2d6 psychic damage, provided that the aberration isn’t incapacitated."}
+            ],
+            Actions: [
+                {label: "Multiattack.", sublabel: "", description: "The aberration makes a number of attacks equal to half this spell’s level (rounded down)."},
+                {label: "Psychic Slam.", sublabel: "Melee Spell Attack:", description: "our spell attack modifier to hit, reach 5 ft., one creature. Hit: 1d8 + 3 + the spell’s level psychic damage."},
+            ],
+            BonusActions: null
         },
       },
       "Demons": {
@@ -697,7 +797,7 @@ class App extends React.Component {
                 WIS: "9 (-1)",
                 CHA: "5 (-3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
@@ -731,7 +831,7 @@ class App extends React.Component {
                 WIS: "8 (-1)",
                 CHA: "5 (-3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
@@ -761,7 +861,7 @@ class App extends React.Component {
                 WIS: "8 (-1)",
                 CHA: "5 (-3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
@@ -833,7 +933,7 @@ class App extends React.Component {
                 WIS: "8 (-1)",
                 CHA: "5 (-3)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Cold, Fire, Lightning",
@@ -902,7 +1002,7 @@ class App extends React.Component {
                 WIS: "10 (+0)",
                 CHA: "12 (+1)"
             },
-            Skills: "--",
+            Skills: null,
             DamageResistances: null,
             DamageImmunities: "Fire, Poison",
             ConditionImmunities: "Poisoned",
@@ -1072,7 +1172,7 @@ class App extends React.Component {
                 WIS: "11 (+0)",
                 CHA: "10 (+0)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks",
@@ -1105,7 +1205,7 @@ class App extends React.Component {
                 WIS: "13 (+1)",
                 CHA: "10 (+0)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: "CON +4",
             DamageVulnerabilities: null,
             DamageResistances: null,
@@ -1139,7 +1239,7 @@ class App extends React.Component {
                 WIS: "11 (+0)",
                 CHA: "7 (-2)"
             },
-            Skills: "--",
+            Skills: null,
             SavingThrows: null,
             DamageVulnerabilities: null,
             DamageResistances: "Bludgeoning, Piercing, and Slashing from Nonmagical Attacks that aren't Adamantine",
@@ -1167,12 +1267,15 @@ class App extends React.Component {
       },
       "Conjure Minor Elementals": {
 
-      }
+      },
+      "Summon Aberration": {
+      },
     }
     this.feySpiritMapper();
     this.lesserDemonMapper();
     this.shadowSpawnMapper();
     this.minorElementalMapper();
+    this.AberrationMapper();
   }
 
   toggleRecentlyConjured() {
@@ -1252,6 +1355,21 @@ class App extends React.Component {
             }
         })
   }
+
+    AberrationMapper() {
+        fetch(`/api/aberrations`)
+        .then((res) => res.json())
+        .then((data) => {
+            if(data.rowCount > 0) {
+                const aberrations = data.rows;
+                aberrations.forEach((aberration) => {
+                    const name = aberration.name;
+                    const type = aberration.type;
+                    this.conjures["Summon Aberration"][name] = {...this.conjures["Summon Aberration Base"][type], name: name};
+                });
+            }
+        })
+    }
 
   render() {
     return (
