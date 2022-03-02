@@ -23,6 +23,7 @@ router.get('/draconicSpirits', draconicSpiritsRoutes.draconicSpiritsGet);
 router.get('/fiends', fiendsRoutes.fiendsGet);
 router.get('/fiends/lesserDemons', fiendsRoutes.lesserDemonsGet);
 router.get('/fiends/greaterDemons', fiendsRoutes.greaterDemonsGet);
+router.get('/fiends/devils', fiendsRoutes.devilsGet);
 router.get('/minions', minionsRoutes.minionsGet);
 router.post('/minions', minionsRoutes.minionsPost);
 router.delete('/minions', minionsRoutes.minionsDelete);

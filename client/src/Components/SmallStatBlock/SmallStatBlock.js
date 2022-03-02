@@ -18,7 +18,7 @@ class SmallStatBlock extends React.Component {
         return (
             <div className="SmallStatBlock">
                 <h3 className="monsterTitle">{conjure.name} {conjure.subName ? `(${conjure.subName})` : ""}</h3>
-                <div className="SB-size">{conjure.size} fey</div>
+                <div className="SB-size">{conjure.size} {conjure.type}</div>
                 <div className="SB-attributes">
                     <div className="SB-AC"><span className="attributeLabel">AC</span><span className="attributeValue"> {conjure.AC}</span></div>
                     <div className="SB-HP"><span className="attributeLabel">HP</span><span className="attributeValue"> {conjure.HP}</span></div>
