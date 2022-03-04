@@ -1,5 +1,16 @@
-.PossibleConjures {
+.PossibleConjuresContainer {
     grid-area: possibleConjures;
+    padding: 10px;
+}
+
+.filterSort {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.PossibleConjures {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
